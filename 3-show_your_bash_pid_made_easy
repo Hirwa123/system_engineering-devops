@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# List all processes with "bash" in their name, showing PID and process name
+pgrep -a bash
