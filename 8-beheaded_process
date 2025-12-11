@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# shellcheck disable=SC2009
+
+# Find the PID(s) of the 7-highlander process
+pids=$(ps aux | grep '7-highlander' | grep -v grep | awk '{print $2}')
+
+# Send SIGKILL (signal 9) to each PID
+for pid in $pids; do
+    kill -9 "$pid"
+done
