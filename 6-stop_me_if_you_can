@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Stop the 4-to_infinity_and_beyond process using pkill
+pkill -f "4-to_infinity_and_beyond"
+
+# Provide feedback
+if [ $? -eq 0 ]; then
+    echo "Process 4-to_infinity_and_beyond has been terminated using pkill."
+else
+    echo "No running process found for 4-to_infinity_and_beyond."
+fi
